@@ -14,6 +14,8 @@ class GameScene: SKScene {
     var sliceBG: SKShapeNode!
     var sliceFG: SKShapeNode!
     
+    var activeSlicePoints = [CGPoint]()
+    
     var lives = 3 {
         didSet {
             setLives(to: lives)
@@ -133,5 +135,56 @@ class GameScene: SKScene {
         finalScore.horizontalAlignmentMode = .center
         finalScore.text = "Final score: \(score)"
         addChild(finalScore)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else { return }
+        activeSlicePoints.removeAll(keepingCapacity: true)
+        
+        let location = touch.location(in: self)
+        activeSlicePoints.append(location)
+        
+        sliceBG.removeAllActions()
+        sliceFG.removeAllActions()
+        
+        sliceBG.alpha = 1
+        sliceFG.alpha = 1
+        
+        redrawActiveSlice()
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else { return }
+        let location = touch.location(in: self)
+        activeSlicePoints.append(location)
+        redrawActiveSlice()
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        sliceBG.run(SKAction.fadeOut(withDuration: 0.25))
+        sliceFG.run(SKAction.fadeOut(withDuration: 0.25))
+    }
+    
+    func redrawActiveSlice() {
+        if activeSlicePoints.count < 2 {
+            sliceBG.path = nil
+            sliceFG.path = nil
+            
+            return
+        }
+        
+        if activeSlicePoints.count > 12 {
+            activeSlicePoints.removeFirst(activeSlicePoints.count - 12)
+        }
+        
+        let path = UIBezierPath()
+        path.move(to: activeSlicePoints[0])
+        
+        for i in 1..<activeSlicePoints.count {
+            path.addLine(to: activeSlicePoints[i])
+        }
+        
+        sliceBG.path = path.cgPath
+        sliceFG.path = path.cgPath
     }
 }
