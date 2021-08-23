@@ -26,6 +26,7 @@ class GameScene: SKScene {
             scoreLabel.text = "Score: \(score)"
         }
     }
+    var isSwooshSoundActive = false
     
     override func didMove(to view: SKView) {
         addBackground()
@@ -139,6 +140,8 @@ class GameScene: SKScene {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
+//        isSwooshSoundActive = true
+        
         activeSlicePoints.removeAll(keepingCapacity: true)
         
         let location = touch.location(in: self)
@@ -155,6 +158,9 @@ class GameScene: SKScene {
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
+        if !isSwooshSoundActive {
+            playSwooshSound()
+        }
         let location = touch.location(in: self)
         activeSlicePoints.append(location)
         redrawActiveSlice()
@@ -186,5 +192,17 @@ class GameScene: SKScene {
         
         sliceBG.path = path.cgPath
         sliceFG.path = path.cgPath
+    }
+    
+    func playSwooshSound() {
+        isSwooshSoundActive = true
+        
+        let randomNumber = Int.random(in: 1...3)
+        let soundName = "swoosh\(randomNumber).caf"
+        
+        let swooshSound = SKAction.playSoundFileNamed(soundName, waitForCompletion: true)
+        run(swooshSound) { [weak self] in
+            self?.isSwooshSoundActive = false
+        }
     }
 }

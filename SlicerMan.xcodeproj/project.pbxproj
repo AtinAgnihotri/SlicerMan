@@ -16,6 +16,14 @@
 		858EF44026D34F5A00D22EEB /* sliceHitEnemy.sks in Resources */ = {isa = PBXBuildFile; fileRef = 858EF43D26D34F5A00D22EEB /* sliceHitEnemy.sks */; };
 		858EF44126D34F5A00D22EEB /* sliceHitBomb.sks in Resources */ = {isa = PBXBuildFile; fileRef = 858EF43E26D34F5A00D22EEB /* sliceHitBomb.sks */; };
 		858EF44226D34F5A00D22EEB /* sliceFuse.sks in Resources */ = {isa = PBXBuildFile; fileRef = 858EF43F26D34F5A00D22EEB /* sliceFuse.sks */; };
+		858EF44326D3676000D22EEB /* whack.caf in Resources */ = {isa = PBXBuildFile; fileRef = 858EF43B26D34F0300D22EEB /* whack.caf */; };
+		858EF44426D3676000D22EEB /* swoosh1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 858EF43826D34F0300D22EEB /* swoosh1.caf */; };
+		858EF44526D3676000D22EEB /* sliceBombFuse.caf in Resources */ = {isa = PBXBuildFile; fileRef = 858EF43726D34F0300D22EEB /* sliceBombFuse.caf */; };
+		858EF44626D3676000D22EEB /* swoosh3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 858EF43626D34F0200D22EEB /* swoosh3.caf */; };
+		858EF44726D3676000D22EEB /* launch.caf in Resources */ = {isa = PBXBuildFile; fileRef = 858EF43426D34F0200D22EEB /* launch.caf */; };
+		858EF44826D3676000D22EEB /* swoosh2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 858EF43926D34F0300D22EEB /* swoosh2.caf */; };
+		858EF44926D3676000D22EEB /* wrong.caf in Resources */ = {isa = PBXBuildFile; fileRef = 858EF43526D34F0200D22EEB /* wrong.caf */; };
+		858EF44A26D3676000D22EEB /* explosion.caf in Resources */ = {isa = PBXBuildFile; fileRef = 858EF43A26D34F0300D22EEB /* explosion.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,11 +97,11 @@
 				858EF43A26D34F0300D22EEB /* explosion.caf */,
 				858EF43426D34F0200D22EEB /* launch.caf */,
 				858EF43726D34F0300D22EEB /* sliceBombFuse.caf */,
+				858EF43B26D34F0300D22EEB /* whack.caf */,
+				858EF43526D34F0200D22EEB /* wrong.caf */,
 				858EF43826D34F0300D22EEB /* swoosh1.caf */,
 				858EF43926D34F0300D22EEB /* swoosh2.caf */,
 				858EF43626D34F0200D22EEB /* swoosh3.caf */,
-				858EF43B26D34F0300D22EEB /* whack.caf */,
-				858EF43526D34F0200D22EEB /* wrong.caf */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -166,11 +174,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				8589A90826D00DA0004C143B /* Main.storyboard in Resources */,
+				858EF44726D3676000D22EEB /* launch.caf in Resources */,
 				8589A8FF26D00DA0004C143B /* GameScene.sks in Resources */,
+				858EF44326D3676000D22EEB /* whack.caf in Resources */,
+				858EF44526D3676000D22EEB /* sliceBombFuse.caf in Resources */,
 				8589A90A26D00DA3004C143B /* Assets.xcassets in Resources */,
 				858EF44026D34F5A00D22EEB /* sliceHitEnemy.sks in Resources */,
 				858EF44126D34F5A00D22EEB /* sliceHitBomb.sks in Resources */,
+				858EF44A26D3676000D22EEB /* explosion.caf in Resources */,
+				858EF44826D3676000D22EEB /* swoosh2.caf in Resources */,
 				858EF44226D34F5A00D22EEB /* sliceFuse.sks in Resources */,
+				858EF44426D3676000D22EEB /* swoosh1.caf in Resources */,
+				858EF44626D3676000D22EEB /* swoosh3.caf in Resources */,
+				858EF44926D3676000D22EEB /* wrong.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
