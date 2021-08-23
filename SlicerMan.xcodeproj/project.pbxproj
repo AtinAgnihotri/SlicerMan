@@ -24,6 +24,7 @@
 		858EF44826D3676000D22EEB /* swoosh2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 858EF43926D34F0300D22EEB /* swoosh2.caf */; };
 		858EF44926D3676000D22EEB /* wrong.caf in Resources */ = {isa = PBXBuildFile; fileRef = 858EF43526D34F0200D22EEB /* wrong.caf */; };
 		858EF44A26D3676000D22EEB /* explosion.caf in Resources */ = {isa = PBXBuildFile; fileRef = 858EF43A26D34F0300D22EEB /* explosion.caf */; };
+		858EF44C26D3781C00D22EEB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858EF44B26D3781C00D22EEB /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		858EF43D26D34F5A00D22EEB /* sliceHitEnemy.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = sliceHitEnemy.sks; sourceTree = "<group>"; };
 		858EF43E26D34F5A00D22EEB /* sliceHitBomb.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = sliceHitBomb.sks; sourceTree = "<group>"; };
 		858EF43F26D34F5A00D22EEB /* sliceFuse.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = sliceFuse.sks; sourceTree = "<group>"; };
+		858EF44B26D3781C00D22EEB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				8589A90626D00DA0004C143B /* Main.storyboard */,
 				8589A90926D00DA3004C143B /* Assets.xcassets */,
 				8589A90B26D00DA3004C143B /* Info.plist */,
+				858EF44B26D3781C00D22EEB /* Constants.swift */,
 			);
 			path = SlicerMan;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				8589A90326D00DA0004C143B /* GameScene.swift in Sources */,
 				8589A90526D00DA0004C143B /* GameViewController.swift in Sources */,
 				8589A8FD26D00DA0004C143B /* AppDelegate.swift in Sources */,
+				858EF44C26D3781C00D22EEB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
